@@ -5,9 +5,11 @@ def main():
     soma = 0
     flag = 0
 
+    print("--------------------------------------------------------------------------------------")
     print("||||          Soma todas as sequências de dígitos que encontra num texto          ||||")
     print("|||| :q -> sair | Off -> desliga contador | On -> liga contador | = -> soma atual ||||")
-    print("Insira uma entrada de texto:")
+    print("||||                         Insira uma entrada de texto:                         ||||")
+    print("--------------------------------------------------------------------------------------")
 
     for line in sys.stdin:
         if re.search(":q",line): break
