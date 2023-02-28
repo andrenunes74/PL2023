@@ -13,7 +13,6 @@ def ponto1(lista):
 
     while(i<len(data)):
         lista.append(data[i])
-        #print(data[i])
         i+=1
     
     print("Total de entradas:"+str(len(lista)))
