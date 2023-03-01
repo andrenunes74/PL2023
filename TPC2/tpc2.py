@@ -20,7 +20,7 @@ def main():
                 if re.match(off,line[i-2]+line[i-1]+line[i]):flag=1
             i+=1
         
-    print("Soma total: " + str(soma))
+    print("Soma total: " + soma)
 
 if __name__ == "__main__":
     main()
