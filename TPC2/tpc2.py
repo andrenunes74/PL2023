@@ -7,7 +7,9 @@ def main():
     on=re.compile(r'on', re.I)
     off=re.compile(r'off', re.I)
 
-    for line in sys.stdin:
+    file1 = open(str(sys.argv[1]), 'r')
+    Lines = file1.readlines()
+    for line in Lines:
         i=0
         flag=0
         while(i<len(line)):
@@ -17,7 +19,8 @@ def main():
                 if re.match(on,line[i-1]+line[i]):flag=0
                 if re.match(off,line[i-2]+line[i-1]+line[i]):flag=1
             i+=1
-        if line[0]+line[1]==":q":break
+        
+    print("Soma total: " + soma)
 
 if __name__ == "__main__":
     main()
