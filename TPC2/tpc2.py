@@ -12,8 +12,10 @@ def main():
     for line in Lines:
         i=0
         flag=0
+        numero=''
         while(i<len(line)):
-            if line[i].isdigit() and flag==0:soma+=int(line[i])
+            if line[i].isdigit() and line[i+1].isdigit() and flag==0:numero=numero+line[i]
+            if line[i].isdigit() and not(line[i+1].isdigit()) and flag==0 and len(numero)!=0:soma+=int(numero)
             if line[i]=='=':print(soma)
             if i>=2:
                 if re.match(on,line[i-1]+line[i]):flag=0
