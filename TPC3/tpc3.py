@@ -34,7 +34,7 @@ def exercicio2():
     er=re.compile(r'([^0-9.]*)', re.I)
     nomes = list()
 
-    #extrai as nomes e ano de todos os processos
+    #extrai os nomes e ano de todos os processos
     file1 = open('processos.txt', 'r')
     Lines = file1.readlines()
     for line in Lines:
@@ -45,7 +45,7 @@ def exercicio2():
             for a in linha:
                 if re.fullmatch(er,a) and len(a)>1:nomes.append((int(ano),a))
 
-    res = list(zip(*nomes)) #unzip so para encontrar o max e min...(cringe)
+    res = list(zip(*nomes))
     inf = int(min(res[0])) #limite inferior séculos
     sup = int(max(res[0])) #limite superior séculos
     inf=int(round(inf/100,0))*100
