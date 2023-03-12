@@ -135,15 +135,16 @@ def exercicio4():
             r[i]=linha
             i+=1
     
+    print(r)
     #cria json
     with open("resultado.json", "w") as outfile:
         json.dump(r, outfile)
 
 
 def main():
-    exercicio1()
-    exercicio2()
-    exercicio3()
+    #exercicio1()
+    #exercicio2()
+    #exercicio3()
     exercicio4()
     return 0
 

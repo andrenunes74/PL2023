@@ -8,7 +8,7 @@ from tabulate import tabulate
 #distribuicões sao apenas uma lista de tuplos ou mesmo um dicionário
 def ponto1(lista):
     i = 1    
-    with open('/PL2023/TPC1/myheart.csv') as file:
+    with open('myheart.csv') as file:
         data = file.read().splitlines()
 
     while(i<len(data)):
